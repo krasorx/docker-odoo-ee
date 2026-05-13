@@ -1,3 +1,14 @@
+# ── Odoo Docker ───────────────────────────────────────────────────────────────
+# Variables de entorno locales
+.env
+
+# Módulos clonados por setup.sh (no versionar, cada proyecto los gestiona)
+addons/*/
+
+# Módulos Enterprise (clonar manualmente en ee-addons/enterprise)
+ee-addons/enterprise/
+
+# ── Python ────────────────────────────────────────────────────────────────────
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
