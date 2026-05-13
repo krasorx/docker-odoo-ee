@@ -21,6 +21,7 @@ services:
       - DB_PORT=5432
       - DB_USER=${POSTGRES_USER}
       - DB_PASSWORD=${POSTGRES_PASSWORD}
+      - DB_NAME=${POSTGRES_DB}
       - ODOO_ADMIN_PASSWORD=${ODOO_ADMIN_PASSWORD}
     env_file:
       - .env

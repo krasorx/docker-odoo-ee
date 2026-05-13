@@ -1,5 +1,6 @@
 [options]
 addons_path = {{ADDONS_PATH}}
+db_name = {{DB_NAME}}
 data_dir = /var/lib/odoo
 admin_passwd = {{ODOO_ADMIN_PASSWORD}}
 log_handler = [':INFO']
