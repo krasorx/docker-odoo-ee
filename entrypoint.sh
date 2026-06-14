@@ -33,7 +33,8 @@ fi
 if [ ${#addons_list[@]} -eq 0 ]; then
     ADDONS_PATH="$ADDONS_BASE"
 else
-    ADDONS_PATH=$(IFS=,; echo "${addons_list[*]}")
+    # Incluir siempre el raíz para módulos colocados directamente en addons/
+    ADDONS_PATH="$ADDONS_BASE,$(IFS=,; echo "${addons_list[*]}")"
 fi
 
 echo "addons_path: $ADDONS_PATH"
