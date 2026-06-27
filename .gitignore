@@ -228,3 +228,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+/modulos-refe
+docker-compose-traefik.yml
+docker-compose.yml
+modules.conf
+odoo.conf.template
