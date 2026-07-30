@@ -1,7 +1,8 @@
 # ── Odoo Docker ───────────────────────────────────────────────────────────────
 # Variables de entorno locales
 .env
-
+modules.conf
+backup/*
 # Módulos clonados por setup.sh (no versionar, cada proyecto los gestiona)
 addons/*/
 

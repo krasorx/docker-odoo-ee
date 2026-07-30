@@ -91,13 +91,13 @@ else
 fi
 
 # ── Arrancar Odoo ─────────────────────────────────────────────────────────────
+# Sin --database para permitir multi-BD y el selector web (list_db).
 echo "Iniciando Odoo 19 Enterprise..."
 exec odoo \
     --db_host="$DB_HOST" \
     --db_port="$DB_PORT" \
     --db_user="$DB_USER" \
     --db_password="$DB_PASSWORD" \
-    --database="$DB_NAME" \
     --http-interface=0.0.0.0 \
     --http-port=8069 \
     --gevent-port=8072 \
