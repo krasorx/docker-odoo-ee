@@ -6,6 +6,7 @@ set -e
 : "${DB_USER:=odoo}"
 : "${DB_PASSWORD:=odoo}"
 : "${DB_NAME:=odoo}"
+: "${DB_FILTER:=.*}"
 : "${ODOO_ADMIN_PASSWORD:=admin}"
 
 ODOO_RC="/etc/odoo/odoo.conf"
@@ -43,7 +44,7 @@ echo "addons_path: $ADDONS_PATH"
 sed \
     -e "s|{{ODOO_ADMIN_PASSWORD}}|${ODOO_ADMIN_PASSWORD}|g" \
     -e "s|{{ADDONS_PATH}}|${ADDONS_PATH}|g" \
-    -e "s|{{DB_NAME}}|${DB_NAME}|g" \
+    -e "s#{{DB_FILTER}}#${DB_FILTER}#g" \
     /etc/odoo/odoo.conf.template > "$ODOO_RC"
 
 # ── Detectar si la BD ya fue inicializada ────────────────────────────────────

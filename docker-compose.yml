@@ -22,6 +22,7 @@ services:
       - DB_USER=${POSTGRES_USER}
       - DB_PASSWORD=${POSTGRES_PASSWORD}
       - DB_NAME=${POSTGRES_DB}
+      - DB_FILTER=${ODOO_DBFILTER:-.*}
       - ODOO_ADMIN_PASSWORD=${ODOO_ADMIN_PASSWORD}
     env_file:
       - .env
